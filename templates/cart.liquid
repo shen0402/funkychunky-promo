@@ -1,0 +1,122 @@
+{% comment %}
+  The contents of the cart.liquid template can be found in /sections/cart-template.liquid
+  
+{% endcomment %}
+{% section 'cart-template' %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%comment%}
+
+
+<div class="recomended-product-wrapper">
+  <div class="recomended-product-inner">
+   
+
+
+
+    {% for product in collections["all"].products %}
+    
+
+        {%- assign iteration_number = forloop.index -%}
+        {% assign current_variant = product.selected_or_first_available_variant %}
+
+        
+        
+
+        {% if product.id == 7820341510359 %}
+            <div class="shop-flex-col-item center home">
+             
+                
+              <div id="w-node-_2c453dd0-c9ca-8595-de3c-3a5b7b5c5cc5-dd266cfc" class="shop-name-inner">
+                <h2 class="black-text no-margin-b no-margin-t">
+                  <a href="{{ product.url }}" class="boost-pfs-filter-product-item-title">{{product.title}}</a><span class="break-line"></span>
+                </h2>
+
+                {%comment%}
+              {% if product.metafields.product_info.collection_description %}
+                <p class="black-text smaller">{{ product.metafields.product_info.collection_description }}</p>
+              {% endif %}
+              {%endcomment%}
+                  
+              </div>
+
+              <p class="product-price-collection">{{product.price | money }}</p>
+
+
+              <button type="submit" name="add" id="AddToCart--jc-product-section" class="general-btn dark-with-w-text _48 margin-b-mob w-button" style="cursor: pointer;">
+                <span class="btn__text">
+                Add to Cart 
+                
+                
+                </span>
+              </button>
+              
+
+            </div>
+
+            {%endif%}
+           
+
+            
+
+    {% endfor %}
+  </div>
+</div>
+
+
+{%endcomment%}
+
+<!-- bcpo done -->

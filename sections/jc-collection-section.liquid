@@ -1,0 +1,410 @@
+<div class="general-hero-section">
+  {%comment%}
+  <div class="about-hero-black-back collection">
+    <div class="about-hero-text-wrapper">
+      
+      <h1 class="collection-header">Corprate Gifting Order</h1>
+    </div>
+    <div class="shopping-for-gift-wrapper">
+      <div class="three-steps-wrapper">
+        <div class="step-wrapper collection">
+          
+          <h3 class="step-heading collection">Step 1</h3>
+          <h5 class="step-sub-heading">CHOOSE YOUR GIFT</h5>
+
+            <a href="/collections/all-products" class="general-btn margin-t w-button">Shop Corporate Gifts</a>
+        </div>
+
+        <div class="step-wrapper collection">
+          
+          <h3 class="step-heading collection">Step 2</h3>
+          <h5 class="step-sub-heading">CHOOSE YOUR CUSTOMIZATION</h5>
+
+            <a href="https://funkychunkygifts.com/collections/customizations" class="general-btn margin-t w-button">Shop Customizations</a>
+        </div>
+
+        <div class="step-wrapper collection">
+         
+          <h3 class="step-heading collection">Step 3</h3>
+          <h5 class="step-sub-heading">CHOOSE YOUR SHIPPING</h5>
+            <a href="/cart" class="general-btn margin-t w-button">Go to Cart</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="top-right-img-shop-category"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/choc-throw2-min.png" loading="lazy" alt="" class="img-absolute shop-cat-2"></div>
+    <div class="top-left-img-shop-category"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/choc-throw3-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/choc-throw3-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/choc-throw3-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/choc-throw3-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/choc-throw3-min.png 1200w" sizes="(max-width: 4000px) 30vw, 1200px" alt="" class="img-absolute shop-cat"></div>
+    <div class="top-right-img-shop-category2"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/choc-throw4-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/choc-throw4-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/choc-throw4-min.png 800w" sizes="15vw" alt="" class="img-absolute shop-cat2"></div>
+  </div>
+  <div class="about-hero-img-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/splash-secondary-pink.svg" loading="lazy" alt="" class="img-hero"></div>
+  {%endcomment%}
+  <div class="about-hero-img-wrapper collection"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/splash-secondary-blue.svg" loading="lazy" alt="" class="img-hero"></div>
+</div>
+
+
+
+
+
+
+<div class="white-section">
+  <div class="general-white-front top-flat center category">
+
+    {% if collection.id == 399838544087 %}
+    <div class="about-hero-text-wrapper collection">
+      <h1 class="black-text">CHOOSE YOUR CORPORATE GIFTS</h1>
+    </div>
+    {%endif%}
+
+    {% if collection.id == 409214320855 %}
+      <div class="about-hero-text-wrapper">
+        <h1 class="black-text">CHOOSE YOUR CUSTOMIZATIONS</h1>
+        <h5 class="black-text" >Add any combination of customization options below. </h5>
+      </div>
+
+
+      <style>
+        .boost-pfs-filter-product-item.boost-pfs-filter-product-item-grid.boost-pfs-filter-grid-width-4.boost-pfs-filter-grid-width-mb-2{
+          width: 50% !important;
+        }
+      </style>
+      {%endif%}
+    
+
+
+    <div class="shop-flex-row">
+
+      
+      {% unless collection.id == 409214320855 %}
+
+          <div id="w-node-_5852a4f6-6017-77c8-49e1-efb44b55133a-dd266cfc" class="shop-flex-row-filter">
+
+            <div class="side-filter">
+
+              <h2 class="h2-larger black-text">Filter by:<span class="break-line"></span></h2>
+              <div id="filter-category" class="filter-category">
+
+                <div class="boost-pfs-filter-tree boost-pfs-filter-tree-v"></div>
+
+                {% render 'dropdown-js' %}
+
+              </div>
+
+            </div>
+          </div>
+        {% endunless %}
+      
+
+
+      <div id="w-node-_2c3b2892-8e2f-cef5-927b-25cc8ef5f29e-dd266cfc" class="shop-flex-col-filter">
+        <div class="sort-btn-wrapper">
+          
+        </div>
+        <div class="shop-flex-row-items">
+
+
+
+          <div class="boost-pfs-filter-products">
+          {% for product in collection.products %}
+
+	    	      {%- assign iteration_number = forloop.index -%}
+              {% assign current_variant = product.selected_or_first_available_variant %}
+              
+
+             
+
+                  
+                    <a href="{{ product.url }}" class="shop-img-wrapper w-inline-block">
+                      <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" loading="lazy"  sizes="(max-width: 479px) 89.765625px, (max-width: 767px) 160px, 200px" class="img-shop">
+                    </a>
+                    <div id="w-node-_2c453dd0-c9ca-8595-de3c-3a5b7b5c5cc5-dd266cfc" class="shop-name-inner">
+                      <h2 class="black-text no-margin-b no-margin-t">
+                        <a href="{{ product.url }}" class="black-bright-blue-link">{{product.title}}</a><span class="break-line"></span>
+                      </h2>
+
+                      {%comment%}
+                      {% for variant in product.variants limit:1 %}
+                        {% if variant.available %}
+
+                        <p class="black-text smaller">{{ variant.title }}</p>
+                          
+                        {% endif %}
+                      {% endfor %}
+                      {%endcomment%}
+
+                    {% if product.metafields.product_info.collection_description %}
+                      <p class="black-text smaller">{{ product.metafields.product_info.collection_description }}</p>
+                    {% endif %}
+                        
+                    </div>
+
+                    {% form "product", product %}
+
+                    <select name="id" class="jc-product-input-hide" style="display: none;">
+                      {% for variant in product.variants %}
+                      {% assign variant_id = variant.id %}
+                        <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %}  value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                      {% endfor %}
+                    </select>
+
+                    <div class="jc-product-page-flex-col jc-product-page-flex-col-input">
+                      <div class="jc-product-quantity-wrapper">
+
+                        <a id="jc-quantity-btn-down--{{variant_id}}" href="#" class="jc-quantity-btn qty-btn-product-down">
+                          <div class="qty-btn"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" alt="" class="qty-btn-img"></div>
+                        </a>
+
+                        <input type="number" id="Quantity" name="quantity" value="1" min="1" class="js-quantity-selector jc-js-quantity-selector--{{variant_id}}">
+
+                        <a id="jc-quantity-btn-up--{{variant_id}}" href="#" class="jc-quantity-btn qty-btn-product-up">
+                          <div class="qty-btn"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" alt="" class="qty-btn-img"></div>
+                        </a>
+
+                      </div>
+                  
+
+                    <p class="black-text">{{product.price | money }}</p>
+
+                    <div class="btn-flex-col-product flex">       
+                      {% assign is_available = product.available %}
+                      {% if is_available == true %}
+                          {% assign cart_btn_text = 'Add To Cart' %}
+                          {% assign cart_disabled = '' %}
+                        {% else %}
+                          {% assign cart_btn_text = 'Sold Out' %}
+                          {% assign cart_disabled = 'disabled="disabled"' %}
+                      {% endif %}
+
+
+                      <button class="general-btn dark-with-w-text w-button" type="submit" {{cart_disabled}} >
+                        {{cart_btn_text}}
+                      </button>
+                    </div>
+          
+                  </div>
+
+              {% endform %} 
+
+
+
+	    	  {% endfor %}
+
+          
+        </div>
+        {% if collection.id == 409214320855 %}
+          <div class="customize-btn-container">
+            <a href="/cart" class="general-btn dark-with-w-text margin-t w-button">Skip and Go to Cart</a>
+          </div>
+
+          <style>
+            .boost-pfs-filter-products{
+            margin-bottom: 5vw;
+          }
+          </style>
+        {%endif%}
+          <div class="boost-pfs-filter-bottom-pagination"></div>
+          <div class="boost-pfs-filter-load-more"></div>
+
+        </div>
+
+
+
+
+      </div>
+
+
+      
+      
+      
+    </div>
+
+
+
+
+
+
+
+    <div  class="bottom-banner w-inline-block">
+      <h2 class="heading-alt">SHIPPING LEAD TIMES & OTHER INFORMATION<br></h2>
+      <p>For full information on shipping and lead times, check out our <a class="normal-link" href="https://funkychunky.com/pages/customer-service-1">Customer Service</a> page.</p>
+    </div>
+  </div>
+</div>
+<div class="home-cta-section">
+  <div class="home-cta-wrapper">
+    <div class="home-cta-content-wrapper">
+      <h1>WE MAKE CORPORATE GIFTING EASY.</h1>
+      <p>When you want to make a lasting impression and show clients your appreciation, turn to the corporate-gifting experts at Funky Chunky.</p>
+      <a href="https://funkychunky.com/pages/corporate-gifting" class="general-btn w-button">Shop Corporate Gifting</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() { 
+    $('.qty-btn-product-down').click(function(e) {
+      e.preventDefault();
+      var current_input = $(this).siblings('.js-quantity-selector');
+      current_input.val( function(i, oldval) {
+        if (oldval < 20) {
+          return 20;
+        }  else {
+          return --oldval;
+        }
+      });
+    });
+    $('.qty-btn-product-up').click(function(e) {
+      e.preventDefault();
+      var current_input = $(this).siblings('.js-quantity-selector');
+      current_input.val( function(i, oldval) {
+        
+       return ++oldval;
+       
+      });
+    });
+  });
+</script>
+
+{%comment%}
+
+<script type="text/javascript">
+  $(document).ready(function() { 
+
+    function incrementDown() {
+
+        $('.jc-js-quantity-selector').val( function(i, oldval) {
+            return --oldval;
+        });
+    }
+
+    function incrementUp() {
+
+        $('.jc-js-quantity-selector').val( function(i, oldval) {
+            return ++oldval;
+        });
+    }
+
+
+    $("#jc-quantity-btn-down--{{variant_id}}").click(function(){
+      incrementDown();
+    });
+
+    $("#jc-quantity-btn-up--{{variant_id}}").click(function(){
+      incrementUp();
+    });
+
+    $(".jc-quantity-btn").hover(function(){
+      var breaker = $(this).find('.jc-quantity-btn-breaker');
+      breaker.css("background-color", "#ffffff");
+      }, function(){
+      var breaker = $(this).find('.jc-quantity-btn-breaker');
+      breaker.css("background-color", "#0049434d");
+    });
+
+   });
+
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() { 
+
+    function incrementDown() {
+
+        $('.jc-js-quantity-selector--{{variant_id}}').val( function(i, oldval) {
+            return --oldval;
+        });
+    }
+
+    function incrementUp() {
+
+        $('.jc-js-quantity-selector--{{variant_id}}').val( function(i, oldval) {
+            return ++oldval;
+        });
+    }
+
+
+    $("#jc-quantity-btn-down--{{variant_id}}").click(function(){
+      incrementDown();
+    });
+
+    $("#jc-quantity-btn-up--{{variant_id}}").click(function(){
+      incrementUp();
+    });
+
+    $(".jc-quantity-btn").hover(function(){
+      var breaker = $(this).find('.jc-quantity-btn-breaker');
+      breaker.css("background-color", "#ffffff");
+      }, function(){
+      var breaker = $(this).find('.jc-quantity-btn-breaker');
+      breaker.css("background-color", "#0049434d");
+    });
+
+   });
+
+</script>
+{%endcomment%}
+
+
+
+<script>   
+  // Declare boostPFSThemeConfig
+  var boostPFSThemeConfig = {     
+      label: {       
+        sorting: {% assign temp = 'collections.sorting.title' | t  %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "Sorting" {% endunless %},       
+        sorting_best_selling: {% assign temp = collection.sort_options[1].name %} {% unless temp == nil %} {{ temp | json }} {% else %} "Best Selling" {% endunless %},       
+        sorting_manual: {% assign temp = collection.sort_options[0].name %} {% unless temp == nil %} {{ temp | json }} {% else %} "Featured" {% endunless %},       
+        sorting_title_ascending: {% assign temp = collection.sort_options[2].name %} {% unless temp == nil %} {{ temp | json }} {% else %} "Alphabetically, A-Z" {% endunless %},       
+        sorting_title_descending: {% assign temp = collection.sort_options[3].name %} {% unless temp == nil %} {{ temp | json }} {% else %} "Alphabetically, Z-A" {% endunless %},       
+        sorting_price_ascending: {% assign temp = collection.sort_options[4].name %} {% unless temp == nil %} {{ temp | json }} {% else %} "Lowest Price" {% endunless %},       
+        sorting_price_descending: {% assign temp = collection.sort_options[5].name %} {% unless temp == nil %} {{ temp | json }} {% else %} "Highest Price" {% endunless %},       
+        sorting_date_ascending: {% assign temp = collection.sort_options[6].name %} {% unless temp == nil  %} {{ temp | json }} {% else %} "Date, Old to New" {% endunless %},       
+        sorting_date_descending: {% assign temp = collection.sort_options[7].name %} {% unless temp == nil  %} {{ temp | json }} {% else %} "Date, New to Old" {% endunless %},       
+        sorting_relevance: {% assign temp = 'collections.sorting.relevance' | t %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "Relevance" {% endunless %},        
+        sale: {{ 'products.product.on_sale' | t | json }},       
+        sale_price: {{ 'products.product.sale_price' | t | json }},       
+        sold_out: {{ 'products.product.sold_out' | t | json }},       
+        vendor: {{ 'products.product.vendor' | t |json }},       
+        regular_price: {{ 'products.product.regular_price' | t | json }},       
+        items_with_count_one: {{ 'collections.general.items_with_count.one' | t | json}},       
+        items_with_count_other: {{ 'collections.general.items_with_count.other' | t | json }},       
+        current_page: {{ 'general.pagination.current_page' | t | json }}, 
+      },     
+      custom: {       
+        // Add custom value here  
+        products_per_page: 20,   
+        product_grid_class: '',
+      }   
+    };// Declare Templates
+  var boostPFSTemplate = {
+      'soldOutClass': ' sold-out',
+      'saleClass': ' on-sale',
+      'soldOutLabelHtml': {% render 'boost-pfs-filter-html', layout: 'soldOutLabelHtml' %},
+      'saleLabelHtml': {% render 'boost-pfs-filter-html', layout: 'saleLabelHtml' %},
+      'tagLabelHtml': {% render 'boost-pfs-filter-html', layout: 'tagLabelHtml' %},
+      'vendorHtml': {% render 'boost-pfs-filter-html', layout: 'vendorHtml' %},
+      // Grid Template
+      'productGridItemHtml': {% render 'boost-pfs-filter-html', layout: 'productGridItemHtml' %},
+      // For List View
+      // List Template
+      'productListItemHtml': {% render 'boost-pfs-filter-html', layout: 'productListItemHtml' %},
+      // End For List View
+      // Pagination Template
+      'previousActiveHtml': {% render 'boost-pfs-filter-html', layout: 'previousActiveHtml' %},
+      'previousDisabledHtml': {% render 'boost-pfs-filter-html', layout: 'previousDisabledHtml' %},
+      'nextActiveHtml': {% render 'boost-pfs-filter-html', layout: 'nextActiveHtml' %},
+      'nextDisabledHtml': {% render 'boost-pfs-filter-html', layout: 'nextDisabledHtml' %},
+      'pageItemHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemHtml' %},
+      'pageItemSelectedHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemSelectedHtml' %},
+      'pageItemRemainHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemRemainHtml' %},
+      'paginateHtml': {% render 'boost-pfs-filter-html', layout: 'paginateHtml' %},
+      // Sorting Template
+      'sortingHtml': {% render 'boost-pfs-filter-html', layout: 'sortingHtml' %},
+      // Show Limit Template
+      'showLimitHtml': {% render 'boost-pfs-filter-html', layout: 'showLimitHtml' %},
+      // Breadcrumb Template
+      'breadcrumbHtml': {% render 'boost-pfs-filter-html', layout: 'breadcrumbHtml' %},
+      'breadcrumbDivider': {% render 'boost-pfs-filter-html', layout: 'breadcrumbDivider' %},
+      'breadcrumbItemLink': {% render 'boost-pfs-filter-html', layout: 'breadcrumbItemLink' %},
+      'breadcrumbItemSelected': {% render 'boost-pfs-filter-html', layout: 'breadcrumbItemSelected' %},
+  };
+  </script>

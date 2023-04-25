@@ -1,0 +1,249 @@
+<div class="address-outter">
+
+<div class="multi-address-product-wrapper">
+  <h2 class="cart-title">SHIPPING OPTIONS</h2>
+
+  {% for product in collections["shipping"].products %}
+      {% if product.id == 7820341510359 %}
+        <h6 class="black-text cart">Multiple Addresses ($9.99 Per Gift/Address)</h6 class="black-text">
+        
+        <p class="black-text">If you are shipping to multiple addresses (Lower 48 states in The U.S. only), select the number of addresses you’re shipping to in the quantity field below. Then download the <a href="https://cdn.shopify.com/s/files/1/0628/6324/5527/files/Online_Business_Gift_Ship_To_Spreadsheet.xlsx?v=1673889581" class="bright-blue-black-link" >CORPORATE ORDER FORM</a> and fill in your addresses. Lastly upload your completed form below.</p>
+      
+    <div class="jc-product-page-form-wrapper">
+      <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+      <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
+      {% capture "form_classes" %}
+        product-single__form{% if product.has_only_default_variant %} product-single__form--no-variants{% endif %}
+      {%- endcapture %}
+      {% capture "form_id" %}AddToCartForm--{{ section.id }}{%- endcapture %}
+      {% form 'product', product, class:form_classes, id:form_id %}
+        <div class="ro_widget"></div>
+          <div class="size-flex-row cart">
+                {% unless product.has_only_default_variant %}
+                  {% for product_option in product.options_with_values %}
+                  <p class="black-text no-margin-b">{{ product_option.name }}:</p>
+                    <div class="">
+                      <select id="select-{{forloop.index}}" class="form-text-field color w-dropdown product-page-select form-select-product size-dropdown">
+                        {% for value in product_option.values %}
+                        <option class="variant-option" jc-option-id="{{option.id}}" {% if product_option.selected_value == value %}selected{% endif %}>{{value}}</option>
+                        {% endfor %}
+                        </select>
+                    </div>
+                  {% endfor %}
+                {% endunless %} 
+                  <select name="id" id="product-select" class="jc-product-select product-form__variants no-js" style="display:none;">
+                    {% for variant in product.variants %}
+                      {% if variant.available %}
+                        <option jc-price="{{variant.price | money}}" {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                          {{ variant.title }} 
+                        </option>
+                      {% else %}
+                        <option jc-price="Sold Out" disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                      {% endif %}
+                    {% endfor %}
+                  </select>
+          </div>             
+        <div class="quantity-and-cart-btn-wrapper">           
+        <div class="product-single__add-to-cart jc-product-page-btn-wrapper">
+            <div class="size-flex-row cart">
+              <p class="black-text no-margin-b product-q">Qty:</p>
+              <div class="jc-product-page-flex-col jc-product-page-flex-col-input cart">
+                <div class="jc-product-quantity-wrapper">
+                  <a id="jc-quantity-btn-down" href="#" class="jc-quantity-btn">
+                    <div class="qty-btn"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" alt="" class="qty-btn-img"></div>
+                  </a>
+                  <input type="number" id="Quantity" name="quantity" value="1" min="1" class="js-quantity-selector cart jc-js-quantity-selector">
+                  <a id="jc-quantity-btn-up" href="#" class="jc-quantity-btn">
+                    <div class="qty-btn"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" alt="" class="qty-btn-img"></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="cart-gift-flex-row">
+                <div class="product-button-wrapper">
+              <button type="submit" name="add" id="AddToCart--{{ section.id }}" class="general-btn dark-with-w-text _48 margin-b-mob w-button">
+                <span class="btn__text">
+                Add to Cart 
+                </span>
+              </button>
+              </div>
+            </div>
+        </div>
+        <div class="via-bill-container">
+            {% if product.variants.size > 1 %}
+            {% if product.compare_at_price_min > product.price %}
+            <div style="margin: 20px -105px -10px -10px; display: flex; justify-content: center;">
+              <div class="viabill-pricetag" data-view="list" data-language="EN" data-currency="USD" data-dynamic-price=".product-single__price" data-dynamic-price-triggers=".single-option-radio.jc-single-option-radio-fieldset" data-scale="1.1"></div>
+            </div>
+            {% else %}
+            <div style="margin: 20px -105px -10px -10px; display: flex; justify-content: center;">
+              <div class="viabill-pricetag" data-view="list" data-language="EN" data-currency="USD" data-dynamic-price=".product-single__price" data-dynamic-price-triggers=".single-option-radio.jc-single-option-radio-fieldset" data-scale="1.1"></div>
+            </div>
+            {% endif %}    
+          {% else %}
+            <div style="margin: 20px -105px -10px -10px; display: flex; justify-content: center;">
+            <div class="viabill-pricetag" data-view="product" data-price="{{ product.price | money }}" data-language="en" data-currency="USD" data-scale="1.1"></div>
+            </div>
+          {% endif %} 
+        </div>
+      </div>
+      {% endform %}
+    </div> <!-- form wrapper -->
+    {%endif%}
+
+
+
+
+
+    {% if product.id == 7821352566999  %}
+      <h6 class="black-text cart">Single Address (Request Quote)</h6 class="black-text">
+      <p class="black-text">If shipping to a single address choose add to cart below. You will be able to enter the address at checkout and a sales representative will reach out with a quote. Have your own shipper number? No problem! Just enter it in the notes section to the right on this page before heading to checkout (Handling fees may apply). <br><br>Any order with INTERNATIONAL ADDRESSES should select this option as well to be properly quoted. </p>
+
+  <div class="jc-product-page-form-wrapper">
+    <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+    <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
+    {% capture "form_classes" %}
+      product-single__form{% if product.has_only_default_variant %} product-single__form--no-variants{% endif %}
+    {%- endcapture %}
+    {% capture "form_id" %}AddToCartForm--{{ section.id }}{%- endcapture %}
+    {% form 'product', product, class:form_classes, id:form_id %}
+      <div class="ro_widget"></div>
+        <div class="size-flex-row cart">
+              {% unless product.has_only_default_variant %}
+                {% for product_option in product.options_with_values %}
+                <p class="black-text no-margin-b">{{ product_option.name }}:</p>
+                  <div class="">
+                    <select id="select-{{forloop.index}}" class="form-text-field color w-dropdown product-page-select form-select-product size-dropdown">
+                      {% for value in product_option.values %}
+                      <option class="variant-option" jc-option-id="{{option.id}}" {% if product_option.selected_value == value %}selected{% endif %}>{{value}}</option>
+                      {% endfor %}
+                      </select>
+                  </div>
+                {% endfor %}
+              {% endunless %} 
+                <select name="id" id="product-select" class="jc-product-select product-form__variants no-js" style="display:none;">
+                  {% for variant in product.variants %}
+                    {% if variant.available %}
+                      <option jc-price="{{variant.price | money}}" {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                        {{ variant.title }} 
+                      </option>
+                    {% else %}
+                      <option jc-price="Sold Out" disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                    {% endif %}
+                  {% endfor %}
+                </select>
+        </div>             
+      <div class="quantity-and-cart-btn-wrapper">           
+      <div class="product-single__add-to-cart jc-product-page-btn-wrapper">
+          <div class="size-flex-row cart">
+            
+            <div class="jc-product-page-flex-col jc-product-page-flex-col-input cart">
+              <div class="jc-product-quantity-wrapper">
+
+                <input type="number" id="Quantity" name="quantity" value="1" min="1" class="js-quantity-selector cart hidden jc-js-quantity-selector">
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="cart-gift-flex-row">
+              <div class="product-button-wrapper">
+            <button type="submit" name="add" id="AddToCart--{{ section.id }}" class="general-btn dark-with-w-text _48 margin-b-mob w-button">
+              <span class="btn__text">
+              Add to Cart 
+              </span>
+            </button>
+            </div>
+          </div>
+      </div>
+      <div class="via-bill-container">
+          {% if product.variants.size > 1 %}
+          {% if product.compare_at_price_min > product.price %}
+          <div style="margin: 20px -105px -10px -10px; display: flex; justify-content: center;">
+            <div class="viabill-pricetag" data-view="list" data-language="EN" data-currency="USD" data-dynamic-price=".product-single__price" data-dynamic-price-triggers=".single-option-radio.jc-single-option-radio-fieldset" data-scale="1.1"></div>
+          </div>
+          {% else %}
+          <div style="margin: 20px -105px -10px -10px; display: flex; justify-content: center;">
+            <div class="viabill-pricetag" data-view="list" data-language="EN" data-currency="USD" data-dynamic-price=".product-single__price" data-dynamic-price-triggers=".single-option-radio.jc-single-option-radio-fieldset" data-scale="1.1"></div>
+          </div>
+          {% endif %}    
+        {% else %}
+          <div style="margin: 20px -105px -10px -10px; display: flex; justify-content: center;">
+          <div class="viabill-pricetag" data-view="product" data-price="{{ product.price | money }}" data-language="en" data-currency="USD" data-scale="1.1"></div>
+          </div>
+        {% endif %} 
+      </div>
+    </div>
+    {% endform %}
+  </div> <!-- form wrapper -->
+  {%endif%}
+
+
+
+  {% endfor %}
+
+
+  <div class="uplaod-form-wrapper">
+  <div class="black-text">Upload Your Form Below</div>
+  <div class="upload-lift"></div>
+  </div>
+
+</div>
+  
+</div>
+
+{%comment%}
+
+{%endcomment%}
+
+  
+  <script type="text/javascript">
+    $(document).ready(function() { 
+  
+      function incrementDown() {
+  
+        $('.jc-js-quantity-selector').val( function(i, oldval) {
+            if (oldval < 2) {
+            return 1;
+          }  else {
+            return --oldval;
+          }
+          });
+      }
+  
+      function incrementUp() {
+  
+          $('.jc-js-quantity-selector').val( function(i, oldval) {
+              return ++oldval;
+          });
+      }
+  
+  
+      $("#jc-quantity-btn-down").click(function(){
+        incrementDown();
+      });
+  
+      $("#jc-quantity-btn-up").click(function(){
+        incrementUp();
+      });
+  
+      $(".jc-quantity-btn").hover(function(){
+        var breaker = $(this).find('.jc-quantity-btn-breaker');
+        breaker.css("background-color", "#ffffff");
+        }, function(){
+        var breaker = $(this).find('.jc-quantity-btn-breaker');
+        breaker.css("background-color", "#0049434d");
+      });
+  
+     });
+
+
+
+  
+  </script>
+  
+  
+  
+  
+  

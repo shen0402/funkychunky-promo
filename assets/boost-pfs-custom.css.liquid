@@ -1,0 +1,78 @@
+/*********************** Custom CSS for Boost Filter & Search  ************************/
+{% assign breakpointMobile = '767px' %}
+{% assign breakpointTabletMin = '768px' %}
+{% assign breakpointTabletMax = '1199px' %}
+{% assign breakpointDesktop = '1200px' %}
+{% assign searchBoxMobileHeight = '64px' %}
+
+
+.boost-pfs-filter-product-item-title{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: alternate-gothic-no-1-d,sans-serif;
+    color: #000;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.boost-pfs-filter-products{
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: auto;
+    margin-bottom: 10vw;
+    margin-left: auto;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    justify-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+
+    flex-direction: row;
+}
+.boost-pfs-filter-product-item.boost-pfs-filter-product-item-grid.boost-pfs-filter-grid-width-4.boost-pfs-filter-grid-width-mb-2{
+    width: 30%;
+    margin-top: 20px;
+}
+.boost-pfs-filter-product-item-image-link{
+    padding-top: 40px !important;
+}
+
+@media screen and (max-width: 767px) {
+    .boost-pfs-filter-product-item.boost-pfs-filter-product-item-grid.boost-pfs-filter-grid-width-4.boost-pfs-filter-grid-width-mb-2{
+        width: 50%;
+        padding: 0 5px;
+        
+        
+    }
+    .boost-pfs-filter-product-bottom{
+        min-height: 200px;
+    }
+    .boost-pfs-filter-product-bottom-inner{
+        min-height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (max-width: 479px) {
+    .boost-pfs-filter-product-item.boost-pfs-filter-product-item-grid.boost-pfs-filter-grid-width-4.boost-pfs-filter-grid-width-mb-2{
+        width: 50%;
+        
+    }
+
+}

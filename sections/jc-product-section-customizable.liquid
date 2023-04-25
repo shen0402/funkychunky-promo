@@ -1,0 +1,569 @@
+
+
+<div class="jc-product-page-wrapper" itemscope itemtype="http://schema.org/Product" id="ProductSection--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product-template"  data-enable-history-state="true" >
+
+	<meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+	<meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
+	{% assign main_product_id = product.id  %}
+	{% assign current_variant = product.selected_or_first_available_variant %}
+	{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+  {% assign current_variant_img = current_variant.image | img_url: '800x' %}
+
+	{% assign variantDescription = current_variant.metafields.variantDescription %}
+	{% assign key = 'description' %}
+
+	{% assign variantDirections = current_variant.metafields.variantDirections %}
+	{% assign key = 'directions' %}
+
+	{% assign variantSafety = current_variant.metafields.variantSafety %}
+	{% assign key = 'safety' %}
+
+	{% assign variantIngredients = current_variant.metafields.variantIngredients %}
+	{% assign key = 'ingredients' %}
+
+	{% assign subHeading = current_variant.metafields.subHeading %}
+	{% assign key = 'heading' %}
+
+	{% assign labResults = product.metafields.labResults %}
+	{% assign key = 'url' %}
+
+	{% assign productVideo = product.metafields.productVideo %}
+	{% assign key = 'videoId' %}
+
+	{% assign productDirections = product.metafields.productDirections %}
+	{% assign key = 'directions' %}
+
+	{% assign productIngredients = product.metafields.productIngredients %}
+	{% assign key = 'ingredients' %}
+
+	{% assign productSafetyLabTest = product.metafields.productSafetyLabTest %}
+	{% assign key = 'safetyLabTest' %}
+
+	{% assign broad_spectrum = false %}
+
+	{% assign current_variant = product.selected_or_first_available_variant %}
+
+  {% assign jc_is_gift_card = false %}
+
+  {% if product.type == 'Gift Card' %}
+    {% assign jc_is_gift_card = true %}
+  {% endif %}
+
+	{% assign productDetails = product.metafields.productDetails %}
+	{% assign key = 'default' %}
+	{% assign productDetails = product.metafields.productDetails %}
+	{% assign key = 'details2' %}
+	{% assign productDetails = product.metafields.productDetails %}
+	{% assign key = 'details3' %}
+
+
+
+	{% if current_variant.available %}
+			{% assign is_available = true %}
+		{% else %}
+			{% assign is_available = false %}
+	{% endif %}
+
+  
+{% if variant.title %}
+{%- assign compare_at_price = variant.compare_at_price -%}
+{%- assign price = variant.price -%}
+{%- assign available = variant.available -%}
+{% else %}
+{%- assign compare_at_price = 1999 -%}
+{%- assign price = 1999 -%}
+{%- assign available = true -%}
+{% endif %}
+
+{%- assign money_price = price | money -%}
+{%for collections in product.collections %}
+  {%unless forloop.index > 3 %}
+    {% assign collection_handle = collections | map: 'handle' %}
+    {% assign collection_url = collections.url %}
+  {%endunless%}
+{%endfor%}
+{% assign collection_handles = product.collections | map: 'handle' %}
+
+      
+{% if product.id == 1537893433401 %}
+<style>
+  .tabs-menu-2::-webkit-scrollbar-thumb{
+    background-color: #f3c300;
+  }
+</style>
+{% endif %}
+{% if product.id == 1537801388089 %}
+<style>
+  .tabs-menu-2::-webkit-scrollbar-thumb{
+    background-color: #70d44b;
+  }
+</style>
+{% endif %}
+{% if product.id == 1537790410809 %}
+<style>
+  .tabs-menu-2::-webkit-scrollbar-thumb{
+    background-color: #c59;
+  }
+</style>
+{% endif %}
+{% if product.id == 1537903099961 %}
+<style>
+  .tabs-menu-2::-webkit-scrollbar-thumb{
+    background-color: #ae841f;
+  }
+</style>
+{% endif %}
+
+</div> <!-- jc-product-page-wrapper -->
+
+  <div class="product-main-section customize">
+
+
+
+    <div class="breadcrumb-wrapper-product">
+
+      {% if jc_is_gift_card == true %}
+        <a href="/products/the-sporting-gent-gift-card" class="breadcrumb-link-product w-inline-block">
+          <p class="black-text no-margin-b">Gift Card</p>
+        </a>
+      {% else %}
+
+      {% comment %}
+         370539459 - /all ? 
+         163034857561 - recommended products 
+         162813182041 - Best sellers
+         162889433177 - TSG Apparel
+      {% endcomment %}
+      {% comment %}{% endcomment %}
+      <div class="breadcrumb-content-block-product">
+        <a href="https://funkychunkygifts.com/collections/all-products" class="breadcrumb-link-product w-inline-block">
+          <p class="black-text breadcrumb-link-product no-margin-b">Choose Your Gift</p>
+        </a>
+      </div>
+      <p class="black-text">     /     </p>
+      <div class="breadcrumb-content-block-product">
+        <a href="https://funkychunkygifts.com/collections/customizations" class="breadcrumb-link-product w-inline-block">
+          <p class="black-text breadcrumb-link-product no-margin-b">Choose Your Customization</p>
+        </a>
+      </div>
+      <p class="black-text">     /     </p>
+      <div class="breadcrumb-content-block-product">
+        <a href="/cart" class="breadcrumb-link-product w-inline-block">
+          <p class="black-text breadcrumb-link-product no-margin-b">Choose Shipping + Checkout</p>
+        </a>
+      </div>
+      {%endif%}
+
+    </div>
+
+    
+
+
+    <div class="product-main-wrapper">
+      <div class="product-main-inner">
+        <div id="w-node-_6a73b9fe-d9ad-0820-98ea-b7508ab58fff-6b9b657d" class="col-75">
+
+
+          <div data-current="Tab 1" id="jc-show-slider-{{variant.id}} data-easing="ease" data-duration-in="300" data-duration-out="100" class="single-product-img-tabs w-tabs">
+            <div class="tabs-menu-2 w-tab-menu">
+              {% for image in product.images %}
+                
+                <a data-w-tab="Tab {{ forloop.index }}" class="tab-link-product w-inline-block single-product-thumbnail-img
+                {%comment%}
+                Chip zel pop Id: 1537893433401
+                Nutty Choco pop Id: 1537801388089
+                Chocolate Pretzel id: 1537790410809
+                Peanut Butter Cup id: 1537903099961
+                {%endcomment%}
+      
+                {% if product.id == 1537893433401 %}
+                yellow
+                {% endif %}
+                {% if product.id == 1537801388089 %}
+                green
+                {% endif %}
+                {% if product.id == 1537790410809 %}
+                pink
+                {% endif %}
+                {% if product.id == 1537903099961 %}
+                brown
+                {% endif %}
+                 
+                 w-tab-link {% if forloop.first == true %}w--current{% endif %}" style="background-image: url({{ image | img_url: '512x' }});" jc-variant-id="{{ image | img_url: '800x' }}">
+                 <div class="tab-link-img-wrapper-product"><img src="{{ image | img_url: '800x' }}" loading="lazy" alt="{{product.title}}" class="tab-link-img-product"></div>
+                </a>
+            
+              {% endfor %}
+            </div>
+            <div class="tabs-content-2 w-tab-content">
+      
+              {% for image in product.images %}
+              <div data-w-tab="Tab {{ forloop.index }}" class="tab-content-wrapper w-tab-pane {% if forloop.first == true %}w--tab-active{% endif %}">
+                <div class="tab-inner-product">
+                <div class="tab-img-wrapper-product">
+                  <div class="main-product-img-wrapper"><img src="{{ image | img_url: '1500x' }}" loading="eager" alt="{{image.alt}}" class="tab-img-product"></div>
+                </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+        </div>
+
+        {%- assign productPriceChange = current_variant.price | money -%}
+        {%- assign current_variant = product.selected_or_first_available_variant -%}
+        {%- assign compare_at_price = current_variant.compare_at_price -%}
+        {%- assign price = current_variant.price -%}
+        <div class="product-img-grid hidden">
+          <div id="w-node-_121f331a-068b-748b-ba4e-8ba79102a8ad-6b9b657d" class="product-thumb-img-inner"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-11.2oz-min.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-11.2oz-min-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-11.2oz-min-p-800.jpg 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-11.2oz-min-p-1080.jpg 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-11.2oz-min.jpg 1400w" sizes="100vw" alt="" class="product-thumb-img"></div>
+          <div id="w-node-_296ed09d-eeb4-1bb6-0a8d-e4dce213449d-6b9b657d" class="product-thumb-img-inner"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CP-small-2oz-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CP-small-2oz-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CP-small-2oz-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CP-small-2oz-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CP-small-2oz-min.png 1400w" sizes="100vw" alt="" class="product-thumb-img"></div>
+          <div id="w-node-_5e75d425-d4ee-d4cf-4180-e16e2307ccb1-6b9b657d" class="product-thumb-img-inner"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-8oz-min.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-8oz-min-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-8oz-min-p-800.jpg 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-8oz-min-p-1080.jpg 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-8oz-min.jpg 1400w" sizes="100vw" alt="" class="product-thumb-img"></div>
+          <div id="w-node-_5842201b-fa66-0235-3ca6-eb5a84a6e0b3-6b9b657d" class="product-thumb-img-inner"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-small-2oz-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-small-2oz-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-small-2oz-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-small-2oz-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-small-2oz-min.png 1400w" sizes="100vw" alt="" class="product-thumb-img"></div>
+          <div id="w-node-ab7d3fd1-722d-4c47-d623-19f426da7806-6b9b657d" class="product-thumb-img-inner"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-small-2oz-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-small-2oz-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-small-2oz-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-small-2oz-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-small-2oz-min.png 1400w" sizes="100vw" alt="" class="product-thumb-img"></div>
+        </div>
+        <div class="product-main-img hidden"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/FC_10012_19oz_Canister_CHOCOLATE_PRETZEL.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/FC_10012_19oz_Canister_CHOCOLATE_PRETZEL-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/FC_10012_19oz_Canister_CHOCOLATE_PRETZEL-p-800.jpg 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/FC_10012_19oz_Canister_CHOCOLATE_PRETZEL-p-1080.jpg 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/FC_10012_19oz_Canister_CHOCOLATE_PRETZEL.jpg 1400w" sizes="100vw" alt="" class="product-img"></div>
+        <div id="w-node-e6c50c12-b49d-90de-5260-ccf60d7c8a10-6b9b657d" class="product-info-wrapper">
+
+
+          <h1 class="product-title-main
+
+          {% if product.id == 1537893433401 %}
+          yellow
+          {% endif %}
+          {% if product.id == 1537801388089 %}
+          green
+          {% endif %}
+          {% if product.id == 1537790410809 %}
+          pink
+          {% endif %}
+          {% if product.id == 1537903099961 %}
+          brown
+          {% endif %}
+
+
+          ">{{ product.title}}</h1>
+          <div class="price-review-flex">
+
+
+            
+            {% if is_available == true %}
+            {% if compare_at_price > price  %}
+             <div class="price-text-product">
+              <span style="text-decoration: line-through">{{compare_at_price | money }}</span> <span id="price">{{current_variant.price | money }}</span>
+             </div>
+             {% else %}
+               <div class="black-text no-margin-b bold larger-p-text price-text-product" id="price">
+                 {{current_variant.price | money }} per gift
+               </div>
+           {% endif %}
+         {% else %}
+           <div class="product-page-price-text"><span style="text-decoration: line-through;" id="price">{{product.price | money }}</span> Sold Out</div>
+         {% endif %}
+
+
+            <div class="review-wrapper-flex-col">
+              {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false, product: product %}
+
+            </div>
+          </div>
+          <div class="ingredient-flex-row">
+
+            {% for ingredient in product.metafields.ingredient.product_ingredient_highlights_3.value %}
+              <div class="ingredient-text">{{ ingredient }}</div>
+              {% unless forloop.last == true %}
+              <div class="ingredient-text pink-text">    |    </div>
+              {% endunless %}
+            {% endfor %}
+
+          </div>
+          <div class="line margin-vert-alt"></div>
+          <p class="black-text-flavor">
+            {{product.description}}
+            
+            
+          <div class="line margin-vert-alt"></div>
+
+          <div class="jc-product-page-form-wrapper">
+
+            <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+            <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
+
+            {% capture "form_classes" %}
+              product-single__form{% if product.has_only_default_variant %} product-single__form--no-variants{% endif %}
+            {%- endcapture %}
+
+            {% capture "form_id" %}AddToCartForm--{{ section.id }}{%- endcapture %}
+
+
+            {% form 'product', product, class:form_classes, id:form_id %}
+
+                
+                {%comment%}
+              <div class="ro_widget"></div>
+              {%endcomment%}
+
+
+              {% if product.variants.size > 1 and product.available %}
+              
+                <div class="size-flex-row">
+                
+                  
+
+                      {% unless product.has_only_default_variant %}
+                        {% for product_option in product.options_with_values %}
+
+                        <p class="black-text no-margin-b">{{ product_option.name }}:</p>
+                          <div class="">
+
+                             <select id="select-{{forloop.index}}" class="form-text-field color w-dropdown product-page-select form-select-product size-dropdown">
+                               {% for value in product_option.values %}
+                               <option class="variant-option" jc-option-id="{{option.id}}" {% if product_option.selected_value == value %}selected{% endif %}>{{value}}</option>
+                               {% endfor %}
+                              </select>
+
+                          </div>
+                        {% endfor %}
+                      {% endunless %} 
+
+     
+                      
+                        <select name="id" id="product-select" class="jc-product-select product-form__variants no-js" style="display:none;">
+                          {% for variant in product.variants %}
+                            {% if variant.available %}
+                              <option jc-price="{{variant.price | money}}" {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                                {{ variant.title }} 
+                              </option>
+                            {% else %}
+                              <option jc-price="Sold Out" disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                            {% endif %}
+                          {% endfor %}
+                        </select>
+                        
+
+                
+                </div>
+                
+              {%else%}
+             
+
+
+
+
+              <select name="id" id="product-select" class="jc-product-select product-form__variants no-js" style="display:none;">
+                {% for variant in product.variants %}
+                  {% if variant.available %}
+                    <option jc-price="{{variant.price | money}}" {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                      {{ variant.title }} 
+                    </option>
+                  {% else %}
+                    <option jc-price="Sold Out" disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+
+              {%endif%}
+
+             
+                              
+              <div class="quantity-and-cart-btn-wrapper">
+                              
+              <div class="product-single__add-to-cart jc-product-page-btn-wrapper">
+
+                {% if is_available %}
+
+                <p>You must order a minimum of 20 for all Corporate Gift items.</p>
+                  <div class="size-flex-row">
+                    <p class="black-text no-margin-b product-q">Qty:</p>
+                    <div class="jc-product-page-flex-col jc-product-page-flex-col-input">
+                      <div class="jc-product-quantity-wrapper">
+                        <a id="jc-quantity-btn-down" href="#" class="jc-quantity-btn">
+                          <div class="qty-btn"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" alt="" class="qty-btn-img"></div>
+                        </a>
+                        <input type="number" id="Quantity" name="quantity" value="20" min="20" class="js-quantity-selector jc-js-quantity-selector">
+                        <a id="jc-quantity-btn-up" href="#" class="jc-quantity-btn">
+                          <div class="qty-btn"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" alt="" class="qty-btn-img"></div>
+                    
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <div class="cart-gift-flex-row">
+                      <div class="product-button-wrapper">
+                       
+                        {% if product.id == 7788488753367 %}
+                          {%comment%}
+                        <p class="checkbox-text" style="font-size: 16px;">
+                          <input class="checkbox-share"  type="checkbox" id="agree" required="required">
+                          <label  for="agree">
+                            I understand I must choose a gift with a ribbon in order to get this customization added to my gifts.
+                          </label>
+                        </p>
+                        {%endcomment%}
+
+                        <p class="checkbox-text" style="font-size: 16px;"><strong>YOU MUST CHOOSE A GIFT WITH RIBBON FOR THIS CUSTOMIZATION</strong></p>
+                    
+                        {%comment%}
+                        <script>
+                            $(".checkbox-share").click(function () {
+                              var idcheck = $(this).val();
+                              $(this).siblings(".general-btn.dark-with-w-text.customize").addClass("hide");
+                          
+
+                          });
+                        </script>
+                        {%endcomment%}
+                        {%endif%}
+                      
+                    <button type="submit" name="add" id="AddToCart--{{ section.id }}" class="general-btn dark-with-w-text _48 margin-b-mob w-button customize">
+                      <span class="btn__text">
+                      Add to Cart
+                      
+                      </span>
+                    </button>
+
+                    {%comment%}
+                    <a href="#" class="general-btn dark-border _48 w-button">Send As E-Gift</a>
+                    {%endcomment%}
+                    </div>
+                  </div>
+                      
+                  {% else %}
+                    
+                <button disabled="disabled" type="submit" name="add" id="AddToCart--{{ section.id }}" class="general-btn dark-with-w-text _48 margin-b-mob w-button">
+                  <span class="btn__text">
+                    {{ 'products.product.sold_out' | t }}
+                  </span>
+                  {%comment%}
+                  <span class="jc-add-to-cart-btn-breaker">
+                    &nbsp;-&nbsp;
+                  </span>
+                  <div class="jc-data-price-container" data-price-container> 
+                  <span id="ProductPrice"
+                    class="product-single__price{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}"
+                    itemprop="price"
+                    content="{{ current_variant.price | divided_by: 100.00 }}"
+                    {% unless is_available %}aria-hidden="true"{% endunless %}><span {% unless is_available %}style="text-decoration:line-through;"{% endunless %}>
+                    {{ current_variant.price | money }}</span>
+                  </span>
+                  </div>
+                  {%endcomment%}
+                </button>
+
+                
+
+                      
+                    {% endif %}
+
+
+
+
+
+
+
+              </div>
+
+              <div class="via-bill-container">
+
+                  {% if product.variants.size > 1 %}
+                  {% if product.compare_at_price_min > product.price %}
+                  <div style="margin: 20px -105px -10px -10px; display: flex; justify-content: center;">
+                    <div class="viabill-pricetag" data-view="list" data-language="EN" data-currency="USD" data-dynamic-price=".product-single__price" data-dynamic-price-triggers=".single-option-radio.jc-single-option-radio-fieldset" data-scale="1.1"></div>
+                  </div>
+                  {% else %}
+                  <div style="margin: 20px -105px -10px -10px; display: flex; justify-content: center;">
+                    <div class="viabill-pricetag" data-view="list" data-language="EN" data-currency="USD" data-dynamic-price=".product-single__price" data-dynamic-price-triggers=".single-option-radio.jc-single-option-radio-fieldset" data-scale="1.1"></div>
+                  </div>
+                  {% endif %}    
+                {% else %}
+                  <div style="margin: 20px -105px -10px -10px; display: flex; justify-content: center;">
+                  <div class="viabill-pricetag" data-view="product" data-price="{{ product.price | money }}" data-language="en" data-currency="USD" data-scale="1.1"></div>
+                  </div>
+                {% endif %} 
+              
+              </div>
+
+            </div>
+
+
+
+
+            {% endform %}
+          </div> <!-- form wrapper -->
+
+
+          
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script type="text/javascript">
+    $(document).ready(function() { 
+  
+      function incrementDown() {
+  
+        $('.jc-js-quantity-selector').val( function(i, oldval) {
+            if (oldval < 21) {
+            return 20;
+          }  else {
+            return --oldval;
+          }
+          });
+      }
+  
+      function incrementUp() {
+  
+          $('.jc-js-quantity-selector').val( function(i, oldval) {
+              return ++oldval;
+          });
+      }
+  
+  
+      $("#jc-quantity-btn-down").click(function(){
+        incrementDown();
+      });
+  
+      $("#jc-quantity-btn-up").click(function(){
+        incrementUp();
+      });
+  
+      $(".jc-quantity-btn").hover(function(){
+        var breaker = $(this).find('.jc-quantity-btn-breaker');
+        breaker.css("background-color", "#ffffff");
+        }, function(){
+        var breaker = $(this).find('.jc-quantity-btn-breaker');
+        breaker.css("background-color", "#0049434d");
+      });
+  
+     });
+
+
+
+  
+  </script>
+
+
+
+
+{% schema %}
+{
+  "name": "Product Page" ,
+  "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_swactches",
+        "label": "Use color swatches for variants?",
+        "default": false
+      }
+  ]
+}
+{% endschema %}
+

@@ -1,0 +1,34 @@
+  
+  <div class="general-white-front top-flat">
+    <div class="login-wrapper">
+      <div class="login-content">
+        <div class="fc-logo"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/fc-mark.svg" loading="lazy" alt=""></div>
+       
+    
+
+        <div class="hero-wrapper-login">
+            <div class="hero-container-login">
+              <div class="form-block-login">
+          
+                {% form 'activate_customer_password' %}
+                  <div class="hero-heading-wrapper-login">
+                    <h1 class="section-heading-sm">Activate Account</h1>
+                  </div>
+                  {{ form.errors | default_errors }}
+                  <input type="password" class="form-input-login w-input" maxlength="256" name="customer[password]" placeholder="Password" id="CustomerPassword" required=""><input type="password" class="form-input-login w-input" maxlength="256" name="customer[password_confirmation]" placeholder="Confirm Password" id="CustomerPasswordConfirmation" required="">
+                  <div class="form-btn-wrapper-login"><input type="submit" value="Submit" data-wait="Please wait..." class="general-btn dark-with-w-text _100 w-button"></div>
+                {% endform %}
+          
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+        <div class="login-img-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min.png 1600w" sizes="100vw" alt="" class="login-img"></div>
+      </div>
+    </div>
+  </div>
