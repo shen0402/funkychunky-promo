@@ -13103,3 +13103,141 @@ body::-webkit-scrollbar-thumb {
     line-height: 24px;
   }
 }
+
+.general-black-back-text {
+  font-size: 24px;
+}
+
+@media (max-width: 767px) {
+  .general-black-back-text {
+    font-size: 18px;
+  }
+}
+
+.collection-bar__heading {
+  margin-bottom: 30px;
+}
+
+.text-transform-none {
+  text-transform: none;
+}
+
+.collection-banner .blue-text {
+  color: #1de7fc;
+}
+
+.customization__wrapper {
+  background-color: #231f20;
+}
+
+.customization__product-grid {
+  background-color: #fff;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.customization__product-grid .recomended-product-inner {
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.customization__product-grid .shop-flex-col-item {
+  -webkit-flex: 0 45%;
+  -ms-flex: 0 45%;
+  flex: 0 45%;
+}
+
+.customization__product-grid .shop-img-wrapper {
+  width: 100%;
+  height: auto;
+  padding-top: 100%;
+  display: block;
+}
+
+@media (max-width: 479px) {
+  .customization__product-grid .shop-flex-col-item {
+    min-width: 40%;
+    margin-right: 9px;
+    margin-left: 9px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.customization__wrapper .categories-grid {
+  display: block;
+}
+
+.customization__wrapper h1 {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.custom-options-wrapper {
+  margin: 100px 0 50px;
+  padding-bottom: 25%;
+}
+
+.custom-options-grid {
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto auto auto;
+  grid-template-rows: auto auto auto;
+}
+
+.custom-options__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.custom-options__list-item {
+  text-align: left;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+.custom-options__button {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.l-button {
+  padding: 20px 100px !important;
+  padding-bottom: 15px !important;
+  border-radius: 41px;
+  font-size: 46px;
+  line-height: 52px;
+  font-weight: 500;
+  font-family: alternate-gothic-no-1-d, sans-serif;
+}
+
+@media (max-width: 767px) {
+  .l-button {
+    padding: 15px 30px 10px !important;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .custom-options-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .collection-custimization {
+    margin-bottom: 82px;
+  }
+}
+
+.footer-img, .categories-grid.home .categories-grid-inner {
+  display: none;
+}

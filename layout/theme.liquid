@@ -209,7 +209,7 @@
 {% render 'limoniapps-discountninja-header' %}{%- if product -%}{%- assign discountninjaproduct = product -%}{%- endif -%}{%- if collection -%}{%- assign discountninjacollection = collection -%}{%- endif -%}
 </head>
 
-<body>
+<body class="template--{{ template.name }} template--{{ template.suffix }}">
 
   {% section 'sk-modal' %}
 

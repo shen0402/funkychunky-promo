@@ -1,0 +1,72 @@
+<div class="collection-custimization">
+  <div class="home-hero-back"></div>
+  <div class="collection-banner">
+    <div class="general-content-wrapper wider no-padding-b">
+      <h1 class="collection-bar__heading black-text">FREE STANDARD CUSTOMIZATIONS</h1>
+      <h5 class="text-transform-none">Add one or all of standard options for FREE!
+        <br>
+        Including choice of ribbon color shown on eligible product pages.
+      </h5>
+      <h5 class="blue-text">NO SETUPS EVER.</h5>
+    </div>
+  </div>
+  <div class="customization__wrapper">
+    <div class="customization__product-grid">
+      <div class="flavor-flex-col">
+        <div class="recomended-product-wrapper">
+          <div class="recomended-product-inner">
+            {% for product in collection.products limit: 2 %}
+              <div class="shop-flex-col-item center ">
+                <a href="{{ product.url }}" class="shop-img-wrapper w-inline-block">
+                  <img
+                    src="{{ product.featured_image | product_img_url: 'master' }}"
+                    alt="{{ product.title | escape }}"
+                    loading="lazy"
+                    sizes="(max-width: 479px) 89.765625px, (max-width: 767px) 160px, 200px"
+                    class="img-shop">
+                </a>
+                <div id="w-node-_2c453dd0-c9ca-8595-de3c-3a5b7b5c5cc5-dd266cfc" class="shop-name-inner">
+                  <h2 class="black-text no-margin-b no-margin-t">
+                    <a href="{{ product.url }}" class="boost-pfs-filter-product-item-title">{{ product.title }}</a>
+                    <span class="break-line"></span>
+                  </h2>
+                </div>
+
+                <p class="product-price-collection">{{ product.price | money }}</p>
+
+                <a href="{{product.url}}" class="general-btn dark-with-w-text margin-t w-button">View details</a>
+
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="center bottom-rounded-down custom-options-wrapper">
+      <div class="categories-grid">
+        <div class="general-white-front no-margin-t">
+          <h1 class="black-text">FULL CUSTOM OPTIONS AVAILABLE</h1>
+          <div class="custom-options-grid">
+            <div class="custom-options__img">
+              <img src="https://cdn.shopify.com/s/files/1/0631/3469/5654/files/Custom_tile_left.png?v=1682531851">
+            </div>
+            <ul class="custom-options__list">
+              <li class="custom-options__list-item">Logo on ribbon</li>
+              <li class="custom-options__list-item">Full color insert card</li>
+              <li class="custom-options__list-item">Full color custom boxes</li>
+              <li class="custom-options__list-item">Custom label sizes & placements</li>
+              <li class="custom-options__list-item">Kitting and Fulfillment</li>
+            </ul>
+            <div class="custom-options__img">
+              <img src="https://cdn.shopify.com/s/files/1/0631/3469/5654/files/Custom_tile_right.png?v=1682531850">
+            </div>
+          </div>
+          <div class="custom-options__button">
+            <a href="#" class="general-btn dark-with-w-text wider w-button l-button">Request more information</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
